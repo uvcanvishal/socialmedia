@@ -7,6 +7,7 @@ import {
   followAndUnfollowUser,
   getUserPosts,
   getUserProfile,
+  loadUser,
 } from "../../Actions/User";
 import Loader from "../Loader/Loader";
 import Post from "../Post/Post";
@@ -39,7 +40,9 @@ const UserProfile = () => {
   const followHandler = async () => {
     setFollowing(!following);
     await dispatch(followAndUnfollowUser(user._id));
+    dispatch(loadUser());
     dispatch(getUserProfile(params.id));
+    
   };
 
   useEffect(() => {

@@ -7,7 +7,7 @@
   
   .homeleft {
     background-image: linear-gradient(to right, #fff5bc, #cec1ff);
-  
+    
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -46,6 +46,7 @@
     }
   
     .homeleft {
+      background-image: none;
       padding: 0;
       min-height: 90vh;
     }

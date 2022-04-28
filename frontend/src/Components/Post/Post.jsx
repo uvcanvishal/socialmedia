@@ -50,14 +50,11 @@ const Post = (
         await dispatch(likePost(postId));
          
         if (page==="account") {
-          console.log(page+"account");
           dispatch(getMyPosts());
         }
         else if(page==="userprofile"){
-          console.log(page);
           dispatch(getUserPosts(params.id));
         } else {
-          console.log(page+"home");
           dispatch(getFollowingPosts());
         }
       };
