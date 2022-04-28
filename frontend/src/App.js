@@ -24,7 +24,7 @@ function App() {
   },[dispatch]);
 
   const {isAuthenticated}= useSelector((state)=>state.user);
-
+  window.addEventListener("contextmenu", (e) => e.preventDefault());
   return (
     <Router>
     {isAuthenticated && <Header />}
